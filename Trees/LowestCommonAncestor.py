@@ -34,20 +34,25 @@ def lowestCommonAncestor(root, key1, key2):
     return root
 
 if __name__ == '__main__':
-    root = Node(50)
-    root.left = Node(30)
-    root.right = Node(70)
-    root.left.left = Node(20)
-    root.left.right = Node(40)
-    root.right.left = Node(60)
-    root.right.right = Node(80)
-    key1 = 20
-    key2 = 70
-    lca = lowestCommonAncestor(root, key1, key2)
-    print(lca.key)
+    root = Node(20)
+    root.left = Node(8)
+    root.right = Node(22)
+    root.left.left = Node(4)
+    root.left.right = Node(12)
+    root.left.right.left = Node(10)
+    root.left.right.right = Node(14)
 
-    key1 = 20
-    key2 = 40
-    lca = lowestCommonAncestor(root, key1, key2)
-    print(lca.key)
+    n1 = 10
+    n2 = 14
+    t = lowestCommonAncestor(root, n1, n2)
+    print("LCA of %d and %d is %d" % (n1, n2, t.key))
 
+    n1 = 14;
+    n2 = 8
+    t = lowestCommonAncestor(root, n1, n2)
+    print("LCA of %d and %d is %d" % (n1, n2, t.key))
+
+    n1 = 10;
+    n2 = 22
+    t = lowestCommonAncestor(root, n1, n2)
+    print("LCA of %d and %d is %d" % (n1, n2, t.key))
