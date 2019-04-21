@@ -26,7 +26,7 @@ of the inorder successor to the node and delete the inorder successor. Note that
                  /  \                            \
                 60   80                           80
 The important thing to note is, inorder successor is needed only when right child is
-not empty. In this particular case, inorder successor can be obtained by finding the
+not empty. In this part icular case, inorder successor can be obtained by finding the
 minimum value in right child of the node.
 
 Time Complexity:
